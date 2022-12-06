@@ -3,9 +3,9 @@ using Negocio;
 
 namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Clientes : Form
     {
-        public Form1()
+        public Clientes()
         {
             InitializeComponent();
         }
@@ -14,9 +14,6 @@ namespace WinFormsApp1
         {
             List<Cliente> clienteLista = new List<Cliente>();
             Cliente cliente1 = new Cliente();
-            cliente1.id = 0;
-            cliente1.nombre = "Hola";
-            cliente1.apellido = "test";
             clienteLista = ClienteNegocio.Get(cliente1);
             try
             {
@@ -28,5 +25,7 @@ namespace WinFormsApp1
             }
   
         }
+
+
     }
 }

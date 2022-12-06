@@ -9,7 +9,19 @@ namespace Entidades
        public string? apellido { get; set; }
 
         public Telefono? Telefono { get; set; }
-        public string? NombreDepartamento
+
+        public int? IDTel
+        {
+            get
+            {
+                if (Telefono != null)
+                    return Telefono.id;
+                else
+                    return null;
+            }
+        }
+
+        public string? NumeroTel
         {
             get
             {

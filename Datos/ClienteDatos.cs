@@ -17,7 +17,7 @@ namespace Datos
 
             using (SqlConnection connection = new SqlConnection(conString))
             {
-                SqlCommand command = new SqlCommand("clienteleadosGet", connection);
+                SqlCommand command = new SqlCommand("empleadosGet", connection);
                 command.CommandType = System.Data.CommandType.StoredProcedure;
                 if (c.id != null)
                     command.Parameters.AddWithValue("@id", c.id);
@@ -32,15 +32,16 @@ namespace Datos
                     {
                         Cliente cliente = new Cliente();
 
-                        cliente.id = Convert.ToInt32(reader["id"]);
+                        cliente.id = Convert.ToInt32(reader["ID_CLIENTE"]);
                         cliente.nombre = Convert.ToString(reader["NOMBRE"]);
+                        cliente.apellido = Convert.ToString(reader["APELLIDO"]);
 
                         //El SP tambien me devuelve datos del departamento
-                        if (reader["nombre_dpto"].GetType() != typeof(DBNull))
+                        if (reader["TELEFONO"].GetType() != typeof(DBNull))
                         {
                             //creo un objeto departamento
                             Telefono tel = new Telefono();
-                           // tel.id = Convert.ToInt32(reader["IDTEL"]); ;
+                            tel.id = Convert.ToInt32(reader["IDTEL"]); ;
                             tel.tel = Convert.ToString(reader["TELEFONO"]);
                             //asigno el dpto al clienteleado
                             cliente.Telefono = tel;
