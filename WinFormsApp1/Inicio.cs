@@ -114,10 +114,10 @@ namespace Front
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form1 = new Clientes();
-                form1.MdiParent = this;
-                form1.WindowState = FormWindowState.Maximized;
-                form1.Show();
+            //Pedidos clientes = new Pedidos();
+         /*   clientes.MdiParent = this;
+            clientes.WindowState = FormWindowState.Maximized;
+            clientes.Show();*/
            
                
 

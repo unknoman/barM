@@ -16,6 +16,18 @@ namespace Entidades
                     return null;
             }
         }
+
+        public string? ClienteApellido
+        {
+            get
+            {
+                if (Cliente != null)
+                    return Cliente.apellido;
+                else
+                    return null;
+            }
+        }
+
         public  DateTime? fecha { get; set; }
 
     }

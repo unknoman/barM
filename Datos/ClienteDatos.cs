@@ -22,7 +22,11 @@ namespace Datos
                 if (c.id != null)
                     command.Parameters.AddWithValue("@id", c.id);
                 if (c.nombre != null)
-                    command.Parameters.AddWithValue("@nombre_apellido", c.nombre);
+                    command.Parameters.AddWithValue("@nombre", c.nombre);
+                if (c.nombre != null)
+                    command.Parameters.AddWithValue("@apellido", c.apellido);
+                if (c.Telefono != null)
+                    command.Parameters.AddWithValue("@telefono", c.Telefono);
 
                 try
                 {
