@@ -36,14 +36,11 @@ namespace Datos
                         cliente.nombre = Convert.ToString(reader["NOMBRE"]);
                         cliente.apellido = Convert.ToString(reader["APELLIDO"]);
 
-                        //El SP tambien me devuelve datos del departamento
                         if (reader["TELEFONO"].GetType() != typeof(DBNull))
                         {
-                            //creo un objeto departamento
                             Telefono tel = new Telefono();
                             tel.id = Convert.ToInt32(reader["IDTEL"]); ;
                             tel.tel = Convert.ToString(reader["TELEFONO"]);
-                            //asigno el dpto al clienteleado
                             cliente.Telefono = tel;
                         }
 

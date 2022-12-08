@@ -1,4 +1,5 @@
 ﻿using System.Collections.Immutable;
+using System.Runtime.CompilerServices;
 
 namespace Entidades
 {
@@ -19,7 +20,7 @@ namespace Entidades
                 else
                     return null;
             }
-        }
+        } 
 
         public string? NumeroTel
         {
