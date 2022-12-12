@@ -35,8 +35,8 @@ namespace Entidades
         {
             get
             {
-                if (EstadoNom.estadonom != null)
-                    return EstadoNom.estadonom;
+                if (EstadoNom.nombre != null)
+                    return EstadoNom.nombre;
                 else
                     return null;
             }
