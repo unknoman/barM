@@ -5,7 +5,6 @@ namespace Entidades
     {
         public int idDet { get; set; }
         public Pedido? Pedido { get; set; }
-
         public Producto? Producto { get; set; }
         public string? NombreProd
         {
@@ -19,7 +18,6 @@ namespace Entidades
         }
 
         public TimeZoneInfo? Hora { get; set; }
-
         public int cantidad { get; set; }
         public Decimal? precioUnitario { get; set; }
     }
