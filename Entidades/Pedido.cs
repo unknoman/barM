@@ -7,6 +7,8 @@ namespace Entidades
         public Cliente? Cliente { get; set; }
 
         public Estado? EstadoNom { get; set; }
+
+        public Producto? Producto { get; set; }
         public string? ClienteNombre
         {
             get
@@ -42,5 +44,27 @@ namespace Entidades
             }
         }
 
+
+        public string? ProductoNom
+        {
+            get
+            {
+                if (Producto.nombre != null)
+                    return Producto.nombre;
+                else
+                    return null;
+            }
+        }
+
+        public decimal? ProductoPre
+        {
+            get
+            {
+                if (Producto.precio != null)
+                    return Producto.precio;
+                else
+                    return null;
+            }
+        }
     }
 }
